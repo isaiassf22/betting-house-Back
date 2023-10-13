@@ -8,6 +8,7 @@
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "rootDirs": ["src", "tests"],
+    "moduleResolution": "Node",
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"]
@@ -18,5 +19,7 @@
       }
     ]
   },
+  "ts-node":{
+    "esm":true},
   "include": ["src", "tests"]
 }

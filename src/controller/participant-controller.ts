@@ -9,7 +9,7 @@ import { showUsersRepo } from "../repository/participants-repository";
 async function createUser(req: Request, res: Response) {
     const user: usertype = req.body
    const create= await createUserServ(user)
-    res.send(create).status(httpStatus.CREATED)
+    res.send(create).status(201)
 }
 
 async function showUsers(req:Request, res:Response) {
