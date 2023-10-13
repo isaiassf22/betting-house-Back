@@ -1,11 +1,16 @@
 ## About
 i'ts a betting-house project. You can bet on available football matches and earn money.
 
+## render deploy
+
 
 ## How to run for development
 
  -Clone this repository
  -Install all dependencies
+
+
+ 
 
 ```bash
 npm i
@@ -38,3 +43,8 @@ npm run test:migration:run
 
 ```bash
 npm run test
+
+## Building for production
+
+```bash
+npm run build
