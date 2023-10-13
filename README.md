@@ -5,7 +5,9 @@ i'ts a betting-house project. You can bet on available football matches and earn
 
 https://bethouse-api.onrender.com
 
-
+use https://bethouse-api.onrender.com/participants to see the list of participants
+or post your own participant.
+ 
 ## How to run for development
 
  -Clone this repository
