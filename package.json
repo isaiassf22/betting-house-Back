@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.ts",
-  "engines": {"node":"18"},
+  "engines": {
+    "node":"18"
+  },
   "scripts": {
-    "start": "nodemon dist/server.js",
-    "dev": "nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register ./src/server.ts' -e ts",
+    "dev": "tsx src/server.ts",
     "build": "tsup src",
+    "start": "nodemon dist/server.js",
     "test": "jest"
   },
   "dependencies": {
