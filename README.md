@@ -45,6 +45,9 @@ npm run test:migration:run
 
 ```bash
 npm run test
+```
+
+
 
 ## Building for production
 
