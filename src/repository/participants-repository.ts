@@ -1,5 +1,5 @@
 import prisma from "../database/database";
-import { usertype } from "../models/utils";
+import { fndUser, usertype } from "../models/utils";
 import dayjs from 'dayjs';
 
 async function createUserRepo(user: usertype) {
@@ -7,43 +7,56 @@ async function createUserRepo(user: usertype) {
         data: {
             username: user.username,
             balance: user.balance,
-            createdAt:dayjs().format(),
-            updetedAt:dayjs().format()
+            createdAt: dayjs().format(),
+            updetedAt: dayjs().format()
         }
     })
 
     return create
 }
 
-async function findUser(username: string) {
-    const check = await prisma.participant.findFirst({
-        where: {
-            username
-        }
+async function findUser(data: (string | number)) {
+    console.log(typeof data)
+    if (typeof data === "string") {
+        const checkName = await prisma.participant.findFirst({
+            where: {
+                username: data
+            }
 
-    })
+        })
+        return checkName
+    } else {
+        const checkId = await prisma.participant.findFirst({
+            where: {
+                id: data
+            }
 
-
-
-
-    return check
-}
-
-    async function showUsersRepo() {
-        return await prisma.participant.findMany()
+        })
+        return checkId
     }
 
-async function updateValueRepo(id:number,balance:number) {
-    const updete = await prisma.participant.update({
-        where:{
-               id
-        },
-        data:{
-            balance: balance,
-            updetedAt:Date.now().toString()
-        }
-    })
+
+
+
 
 }
 
-export { createUserRepo, findUser,updateValueRepo, showUsersRepo }
+async function showUsersRepo() {
+    return await prisma.participant.findMany()
+}
+
+async function updateValueRepo(id: number, newBalance: number) {
+    const update = await prisma.participant.update({
+        where: {
+            id
+        },
+        data: {
+            balance: newBalance,
+            updetedAt: dayjs().format()
+        }
+    })
+
+    return update
+}
+
+export { createUserRepo, findUser, updateValueRepo, showUsersRepo }

@@ -17,12 +17,12 @@ async function showUsers(req:Request, res:Response) {
    return res.send(result).status(httpStatus.OK)
 }
 
-async function updateValue(req: Request, res: Response) {
+/*async function updateValue(req: Request, res: Response) {
     const update: usertype = req.body
     await updateValueServ(update)
 
     return res.sendStatus(httpStatus.ACCEPTED)
-}
+}*/
 
 
 

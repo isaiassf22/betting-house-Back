@@ -13,11 +13,11 @@ async function createUserServ(user:usertype){
 }
 
 
-async function updateValueServ(update:usertype) {
-    const {username,balance}=update
-    const userExists =await findUser(username)
+async function updateValueServ(id:number,newBalance:number) {
+
+    const userExists =await findUser(id)
     if(userExists){
-        await updateValueRepo(userExists.id,balance)
+        await updateValueRepo(userExists.id,newBalance)
     }
 }
 
