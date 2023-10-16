@@ -32,7 +32,7 @@ model Bet {
   id            Int         @id @default(autoincrement())
   amountBet     Int
   gameId        Int         
-  participantId Int         @unique
+  participantId Int        
   status        String
   amountWon     Int         @default(0)
   homeTeamScore Int
