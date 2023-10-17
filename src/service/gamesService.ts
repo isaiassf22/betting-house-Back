@@ -1,5 +1,5 @@
-import { endGameTyoe } from "@/models/utils"
-import { createGameRepo, endGameRepo, searchGameRepo } from "@/repository/games-repository"
+import { endGameTyoe } from "../models/utils"
+import { createGameRepo, endGameRepo, searchGameRepo } from "../repository/games-repository"
 
 
 
@@ -24,3 +24,4 @@ const {homeTeamScore,awayTeamScore}= data
 }
 
  export {createGameServ,searchGameServ,endGameServ}
+ export default {createGameServ,searchGameServ,endGameServ}

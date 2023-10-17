@@ -1,8 +1,8 @@
 
-import { betType, endGameTyoe, updtBetType } from "@/models/utils";
-import { createBetRepo, searchBet, updatingBetRepo } from "@/repository/bets-repository";
-import { findUser, updateValueRepo } from "@/repository/participants-repository";
-import { searchGameServ } from "./games-service";
+import { betType, endGameTyoe, updtBetType } from "../models/utils";
+import { createBetRepo, searchBet, updatingBetRepo } from "../repository/betsRepository";
+import { findUser, updateValueRepo } from "../repository/participantsRepository";
+import { searchGameServ } from "./gamesService";
 import { updateValueServ } from "./participants-service";
 
 async function createBetServ(data: betType) {
@@ -49,3 +49,4 @@ async function updatingBetServ(id:number,homeTeamScore:number, awayTeamScore:num
 
 
 export { createBetServ, updatingBetServ }
+export default { createBetServ, updatingBetServ }

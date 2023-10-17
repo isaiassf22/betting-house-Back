@@ -60,3 +60,4 @@ async function updateValueRepo(id: number, newBalance: number) {
 }
 
 export { createUserRepo, findUser, updateValueRepo, showUsersRepo }
+export default{createUserRepo, findUser, updateValueRepo, showUsersRepo }

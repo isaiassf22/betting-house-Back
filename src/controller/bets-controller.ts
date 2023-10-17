@@ -1,4 +1,4 @@
-import { createBetServ } from "@/service/bets-service";
+import { createBetServ } from "../service/betsService";
 import { Request,Response } from "express";
 
 async function createBet(req:Request, res:Response) {

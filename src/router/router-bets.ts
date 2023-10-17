@@ -1,4 +1,4 @@
-import { createBet } from "@/controller/bets-controller";
+import { createBet } from "../controller/bets-controller";
 import { Router } from "express";
 
 const betsRouter=Router()

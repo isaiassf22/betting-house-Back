@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { createUserServ, updateValueServ } from "../service/participants-service";
 import { usertype } from "../models/utils";
 import httpStatus from "http-status";
-import { showUsersRepo } from "../repository/participants-repository";
+import { showUsersRepo } from "../repository/participantsRepository";
 
 
 

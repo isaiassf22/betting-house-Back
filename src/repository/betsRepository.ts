@@ -1,7 +1,7 @@
-import prisma from "@/database/database";
-import { betType, updtBetType } from "@/models/utils";
+import prisma from "../database/database";
+import { betType, updtBetType } from "../models/utils";
 import dayjs from "dayjs";
-import { updateValueRepo } from "./participants-repository";
+import { updateValueRepo } from "./participantsRepository";
 import { error } from "console";
 
 async function createBetRepo(data:betType,newBalance:number) {
@@ -53,3 +53,4 @@ async function updatingBetRepo(id:number,status:string,amountWon:number) {
 
 export {createBetRepo,updatingBetRepo,searchBet}
 
+export default {createBetRepo,updatingBetRepo,searchBet}

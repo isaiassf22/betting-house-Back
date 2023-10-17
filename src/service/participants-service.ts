@@ -1,11 +1,12 @@
 import httpStatus from "http-status"
 import { usertype } from "../models/utils"
-import { createUserRepo, findUser, updateValueRepo,  } from "../repository/participants-repository"
+import { createUserRepo, findUser, updateValueRepo,  } from "../repository/participantsRepository"
+import { error } from "console"
 
 async function createUserServ(user:usertype){
 
     const {username,balance}=user
-    if(balance<1000) throw httpStatus.NOT_ACCEPTABLE
+    if(balance<1000) throw new Error("balance is not acceptable")
    const userExists= await findUser(username)
    if(userExists) throw httpStatus.CONFLICT
 

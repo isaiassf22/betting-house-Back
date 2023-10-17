@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { createGameServ, endGameServ, searchGameServ } from "@/service/games-service";
-import { availiableGamesRepo, searchGameRepo } from "@/repository/games-repository";
+import { createGameServ, endGameServ, searchGameServ } from "../service/gamesService";
+import { availiableGamesRepo, searchGameRepo } from "../repository/games-repository";
 import httpStatus from "http-status";
 
 

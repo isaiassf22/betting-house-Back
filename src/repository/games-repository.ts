@@ -1,6 +1,5 @@
-import prisma from "@/database/database";
-import { endGameTyoe } from "@/models/utils";
-import { updatingBetServ } from "@/service/bets-service";
+import prisma from "../database/database";
+import { updatingBetServ } from "../service/betsService";
 import dayjs from 'dayjs';
 
 async function createGameRepo(homeTeamName: string, awayTeamName: string) {
@@ -44,3 +43,4 @@ async function endGameRepo(id:number,homeTeamScore:number, awayTeamScore:number)
 }
 
 export { createGameRepo, availiableGamesRepo, searchGameRepo, endGameRepo }
+export default { createGameRepo, availiableGamesRepo, searchGameRepo, endGameRepo }

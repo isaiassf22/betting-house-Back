@@ -1,4 +1,4 @@
-import { availableGames, createGame, endGame, searchGame } from "@/controller/games-controller";
+import { availableGames, createGame, endGame, searchGame } from "../controller/games-controller";
 import { Router } from "express";
 
 const gamesRouter= Router()
