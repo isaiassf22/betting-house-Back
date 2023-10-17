@@ -16,8 +16,9 @@ describe('it should validate the service betss rules', () => {
             gameId: 1,
             participantId: 1
         }
-        const create = await createBetServ(bet)
-        expect(create).rejects.toEqual(new Error("Game not found!"))
+        const create = createBetServ(bet)
+        await expect(create).rejects.toEqual(new Error("Game not found!"))
+        
 
     })
 

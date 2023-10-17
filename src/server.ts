@@ -19,9 +19,12 @@ server.use(health.get('/health',(req:Request,res:Response)=>{
     res.send("helth running")    
 }))
 
+server.get('/',(req:Request,res:Response)=>{
+    res.send("helth running")    
+})
 const port= 5000
-
-server.listen(port, ()=>{
+const HOST ='0.0.0.0'
+server.listen(port,HOST, ()=>{
     console.log('server running successfuly!')
 })
 
